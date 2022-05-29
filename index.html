@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <title>Doppler Blackbox</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Materialize -->
+  <link rel="stylesheet" href="materialize.min.css" />
+  <script src="materialize.min.js"></script>
+
+  <!-- Chart JS -->
+  <script src="chart.min.js"></script>
+
+  <!-- Scripts -->
+  <script src="main-E2.js" defer></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style-E2.css" />
+</head>
+
+<body>
+</body>
+
+<div class="text">
+  <h2></h2>
+
+  <br>
+  <div class="container">
+    <div class="row">
+      <center>
+        <div class="col l3">
+          <span>r<sub>D</sub> (m):</span>
+          <input id="dist-input" type="number">
+        </div>
+        <div class="col l3">
+          <span>θ (degrees):</span>
+          <input id="dist-angle-input" type="number">
+        </div>
+        <div class="col l3">
+          <span>v<sub>D</sub> (m/s):</span>
+          <input id="vel-input" type="number">
+        </div>
+        <div class="col l3">
+            <span>&#120574 (degrees):</span>
+          <input id="vel-angle-input" type="number">
+        </div>
+      </center>
+    </div>
+    <div class="row">
+      <center>
+        <div class="col l4">
+          <span>Graph Start time t<sub>i</sub> (s):</span>
+          <input id="simul-start-time-input" type="number">
+        </div>
+        <div class="col l4">
+          <span>Graph End time t<sub>f</sub> (s):</span>
+          <input id="simul-end-time-input" type="number">
+        </div>
+        <div class="col l4">
+          <span>Data-point interval Δ (s):</span>
+          <input id="time-step-input" type="number">
+        </div>
+        <button class="btn purple darken-4" onclick="initParams()">Plot Graph</button>
+      </center>
+    </div>
+  </div>
+  <br>
+  <center>
+    <canvas id="graph-canvas"></canvas>
+  </center>
+  <!--<h2>Extremas</h2>-->
+  <br>
+  <div class="container">
+    <div class="row">
+    <center>
+      <table id="table">
+      </table>
+    </center>
+    </div>
+  </div>
+  <br />
+  <br />
+  <hr />
+  <br />
+</div>
+
+</html>
